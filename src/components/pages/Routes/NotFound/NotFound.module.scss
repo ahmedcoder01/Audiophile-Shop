@@ -1,0 +1,15 @@
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/variables/sizes";
+@import "../../../../sass/variables/colors";
+
+.not-found {
+  height: calc(100vh - 87px);
+  @include flex-layout(row, center, center, null);
+
+  .not-found__holder {
+    background: $orange;
+    @include flex-layout(column, center, center, 20px);
+    padding: 20px;
+    border-radius: $small-round;
+  }
+}

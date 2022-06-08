@@ -1,0 +1,34 @@
+@import "../../sass/helpers/mixins";
+@import "../../sass/variables/sizes";
+
+.brief {
+  padding: $section 0;
+}
+
+.container {
+  @include flex-layout(row, center, center, 50px);
+  > * {
+    flex: 1;
+  }
+
+  picture {
+    border-radius: 13px;
+
+    img {
+      border-radius: inherit;
+    }
+  }
+
+  @include breakpoint-max(small) {
+    flex-direction: column;
+    text-align: center;
+
+    picture {
+      order: -1;
+    }
+  }
+}
+
+.brief__content {
+  @include flex-layout(column, null, null, 20px);
+}

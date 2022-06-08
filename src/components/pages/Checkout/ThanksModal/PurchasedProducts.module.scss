@@ -1,0 +1,45 @@
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/variables/colors";
+@import "../../../../sass/variables/sizes";
+
+.purchased {
+  @include flex-layout(row, space-between, center, 0);
+  width: 100%;
+  border-radius: $small-round;
+  $padding: 1.5rem;
+  align-items: stretch;
+
+  .purchased__items {
+    max-height: 40vh;
+    overflow-y: scroll;
+    flex: 1;
+    background: $gray;
+    padding: 0 $padding / 1.2 $padding $padding;
+    @include flex-layout(column, null, null, 20px);
+    border-radius: 8px 0 0 8px;
+
+    @include scrollBar();
+
+    .purchased__items__button {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .purchased__grand-total {
+    flex: 1;
+    @include flex-layout(column, center, center, 15px);
+    background: $black;
+    border-radius: 0 $small-round $small-round 0;
+
+    .purchased__grand-total__price {
+      color: $white;
+      font-weight: 600;
+    }
+  }
+}

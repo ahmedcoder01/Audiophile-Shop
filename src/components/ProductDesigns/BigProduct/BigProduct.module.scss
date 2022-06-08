@@ -1,0 +1,66 @@
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+
+.big-product {
+  padding: ($section / 3) 0;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  @include flex-layout(column, null, null, null);
+
+  flex-grow: 1;
+}
+
+.wrapper {
+  background: url("../../../assets/images/home/desktop/pattern-circles.svg")
+    $orange;
+  @include background(center);
+  overflow: hidden;
+  border-radius: $small-round;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include flex-layout(row, center, center, null);
+  flex-grow: 1;
+
+  button {
+    margin: initial;
+  }
+
+  @include breakpoint-max(small) {
+    flex-direction: column;
+    text-align: center;
+
+    button {
+      margin: auto;
+    }
+  }
+
+  .product__content {
+    flex: 1;
+    @include flex-layout(column, null, null, 15px);
+  }
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  flex: 1.5;
+
+  img {
+    max-width: 410px;
+
+    @include breakpoint-min(small) {
+      position: relative;
+      top: 42px;
+    }
+
+    @include breakpoint-max(small) {
+      max-width: 180px;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../sass/helpers/mixins";
+@import "../../sass/variables/sizes";
+@import "../../sass/variables/colors";
+
+.footer {
+  background: $black;
+  padding: $section - 20px 0;
+
+  .footer__container {
+    @include flex-layout(column, null, null, 35px);
+
+    .footer__container__row {
+      @include flex-layout(row, space-between, center, 0);
+
+      @include breakpoint(mobile) {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+      }
+
+      > * {
+        flex: 1;
+      }
+
+      .footer__container__row__social,
+      .footer__container__row__pages-links {
+        @include flex-layout(row, center, center, null);
+      }
+
+      .footer__container__row__social {
+        li {
+          padding: 0 15px;
+        }
+      }
+
+      .footer__container__row__pages-links {
+        li {
+          a {
+            color: $white;
+            font-weight: 600;
+            transition: 0.3s;
+            padding: 0 30px;
+
+            @include breakpoint(mobile) {
+              padding: 0 8px;
+            }
+
+            &:hover {
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}

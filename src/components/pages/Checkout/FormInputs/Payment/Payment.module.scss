@@ -1,0 +1,52 @@
+@import "../../../../../sass/helpers/mixins";
+@import "../../../../../sass/variables/colors";
+@import "../../../../../sass/variables/sizes";
+
+.payment {
+  .payment__radio {
+    @include flex-layout(row, space-between, null, null);
+    padding: 0 0 40px;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    p {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .payment__radio-inputs {
+      @include flex-layout(column, space-between, center, 10px);
+      padding: 14px;
+      flex-basis: 45%;
+
+      .payment__radio-input {
+        cursor: pointer;
+        width: 100%;
+        @include flex-layout(row, null, center, 10px);
+        border: 1px solid #cfcfcf;
+        outline: none;
+        padding: 14px;
+        border-radius: $small-round;
+
+        span {
+          font-weight: 600;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .payment__emoney {
+    @include grid-layout(250px, 15px);
+  }
+  .payment__cash {
+    @include flex-layout(row, center, center, 20px);
+  }
+}
+
+.payment__cash__text {
+  max-width: 420px;
+}

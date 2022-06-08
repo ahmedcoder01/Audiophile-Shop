@@ -1,0 +1,164 @@
+// creates a grid layout
+/// args >> (element min width),(gap length)
+@mixin grid-layout($minWidth, $gap) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(auto-fill, minmax($minWidth, 1fr));
+}
+
+// creates a flex layout
+/// args >> (flex direction),(justify),(align),(gap length)
+@mixin flex-layout($direction, $justify, $align, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+// crnters the element with position
+/// args >> (way: top|left|both)
+@mixin centered($way) {
+  $x: 0;
+  $y: 0;
+
+  @if $way == x {
+    $x: 50%;
+  } @else if $way == y {
+    $y: 50%;
+  } @else if $way == both {
+    $x: 50%;
+    $y: 50%;
+  }
+
+  left: $x;
+  top: $y;
+  transform: translate(-#{$x}, -#{$y});
+}
+
+// centers the element with grid
+@mixin centered-grid {
+  display: grid;
+  place-items: center;
+}
+
+// creates hover states animations
+/// args >> (backgeound color),(color),(transition duartion)
+@mixin hover-state($background, $color, $time) {
+  transition: $time;
+
+  @if $background != null {
+    background: $background;
+  }
+
+  @if $color != null {
+    color: $color;
+  }
+}
+
+// creates the main peusdo element styles
+/// args >> (content),(width),(height)
+@mixin peusdo($content, $width, $height) {
+  content: if($content, $content, "");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: $height;
+}
+
+/// created media queries
+/// @param {screen size} {your-content}
+@mixin breakpoint($size) {
+  @if $size == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $size == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $size == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-max($screen) {
+  $size: 0px;
+
+  @if $screen == mobile {
+    $size: 767px;
+  } @else if $screen == small {
+    $size: 991px;
+  } @else if $screen == medium {
+    $size: 1199px;
+  }
+
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min($screen) {
+  $size: 0px;
+
+  @if $screen == mobile {
+    $size: 768px;
+  } @else if $screen == small {
+    $size: 992px;
+  } @else if $screen == medium {
+    $size: 1200;
+  }
+
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+/// mixin that add placeholder styles
+@mixin placeholder() {
+  &::placeholder {
+    @content;
+  }
+}
+
+/// mixin that adds background main styles
+@mixin background($pos) {
+  background-size: cover;
+  background-position: $pos;
+  background-repeat: no-repeat;
+  object-fit: center;
+}
+
+// mixin that creates responsive images
+@mixin responsive-image($lg, $md, $sm) {
+  @include breakpoint-max(mobile) {
+    background-image: $sm;
+  }
+  @include breakpoint(small) {
+    background-image: $md;
+  }
+  @include breakpoint-min(small) {
+    background-image: $lg;
+  }
+}
+
+//mixin that makes scrollbars better looking
+@mixin scrollBar() {
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #afa9a9;
+    border-radius: 10px;
+  }
+}

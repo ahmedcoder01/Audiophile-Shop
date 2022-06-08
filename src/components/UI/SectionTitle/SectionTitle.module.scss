@@ -1,0 +1,15 @@
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/variables/sizes";
+@import "../../../sass/variables/colors";
+
+.section-title {
+  height: 35vh;
+  background: $black;
+  @include flex-layout(row, center, center, null);
+
+  h2 {
+    color: $white;
+    text-transform: uppercase;
+    font-size: $heading2;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+
+.text {
+  color: $text;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+.gray {
+  color: $gray-text;
+}
+p.orange {
+  color: $orange;
+}
+
+.splitted {
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}

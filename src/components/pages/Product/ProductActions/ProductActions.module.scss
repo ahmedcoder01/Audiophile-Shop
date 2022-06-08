@@ -1,0 +1,14 @@
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/variables/sizes";
+@import "../../../../sass/variables/colors";
+
+.product__actions {
+  @include flex-layout(row, null, center, 25px);
+
+  @include breakpoint-max(mobile) {
+    justify-content: center;
+    > * {
+      margin: initial;
+    }
+  }
+}

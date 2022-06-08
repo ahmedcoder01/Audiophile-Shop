@@ -1,0 +1,19 @@
+@import "../../sass/helpers/mixins";
+@import "../../sass/variables/sizes";
+
+.sections-options {
+  padding: $section * 2 0 $section;
+}
+
+.container {
+  ul {
+    @include flex-layout(row, center, center, 20px);
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      gap: 60px;
+      li {
+        width: 100%;
+      }
+    }
+  }
+}

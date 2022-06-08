@@ -1,0 +1,10 @@
+@import "../../../sass/helpers/mixins";
+
+.cart__items {
+  @include flex-layout(column, center, center, 15px);
+  padding: 16px;
+  max-height: 40vh;
+  overflow-y: scroll;
+
+  @include scrollBar();
+}

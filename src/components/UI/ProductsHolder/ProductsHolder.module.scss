@@ -1,0 +1,14 @@
+@import "../../../sass/variables/sizes";
+@import "../../../sass/helpers/mixins";
+
+.products-holder {
+  padding: $section 0;
+  @include flex-layout(column, center, center, 120px);
+
+  // reversing consective products by reversing the picture order in flexbox
+  @include breakpoint-min(small) {
+    & > *:nth-child(even) picture {
+      order: 3;
+    }
+  }
+}

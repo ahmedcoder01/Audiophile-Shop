@@ -1,0 +1,103 @@
+@import "../../../sass/variables/colors";
+@import "../../../sass/helpers/mixins";
+
+.background {
+  // min-height: calc(100vh - 95px);
+  @include flex-layout(row, center, center, null);
+  height: calc(100vh - 98px);
+}
+.card {
+  @include breakpoint-min(mobile) {
+    // margin-bottom: 95px;
+    min-width: 400px;
+  }
+
+  @include flex-layout(column, center, center, 0);
+}
+.logo {
+  margin-bottom: 10px;
+
+  img {
+    transform: scale(1.2);
+  }
+}
+
+form.auth {
+  @include flex-layout(column, center, initial, null);
+  padding: 35px;
+  border-radius: 15px;
+  background: rgb(22, 29, 47);
+  width: 100%;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $white;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid rgb(90, 105, 143);
+    padding: 14px 0 14px;
+    color: white;
+
+    &::placeholder {
+      transition: 0.3s;
+    }
+
+    &:focus::placeholder {
+      position: absolute;
+      font-size: 14px;
+      transform: translateY(-16px);
+      color: $orange;
+    }
+  }
+
+  button {
+    border-radius: 4px;
+    background: $orange;
+    padding: 12px 0;
+    outline: none;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 0 2px $orange;
+      color: $orange;
+      background: transparent;
+    }
+  }
+
+  p {
+    color: white;
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: center;
+    span {
+      color: $orange;
+      > * {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.input__holder {
+  @include flex-layout(column, center, initial, 15px);
+  margin: 45px 0 27px;
+}
+
+.pass-error,
+.email-error,
+.error {
+  font-size: 14px;
+  margin-top: 0;
+  color: #ff5722;
+  text-align: left;
+  padding: 10px;
+}

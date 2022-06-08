@@ -1,0 +1,14 @@
+@import "../../../../sass/variables/colors";
+@import "../../../../sass/variables/sizes";
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/helpers/keyframes";
+
+.modal-body {
+  @include flex-layout(column, center, center, 15px);
+
+  animation: pop 0.4s linear;
+  padding: 35px 49px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,13 @@
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+
+.goback {
+  color: $gray-text;
+  transition: 0.3s;
+  cursor: pointer;
+  padding-top: $section;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

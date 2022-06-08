@@ -1,0 +1,14 @@
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+
+.suggestion-product {
+  @include flex-layout(column, center, center, 15px);
+
+  picture {
+    border-radius: $small-round;
+    img {
+      border-radius: inherit;
+    }
+  }
+}

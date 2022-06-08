@@ -1,0 +1,33 @@
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+
+.heading {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+// creating a class for every heading
+//* preview {$sizes} var in 'sass/variables/_sizes.scss'
+@each $size, $name in $sizes {
+  .#{$name} {
+    font-size: clamp(($size * 0.72), 8vmin, $size);
+  }
+}
+
+//* preview {$colors} var in 'sass/variables/_colors.scss'
+@each $name, $color in $colors {
+  .#{$name} {
+    color: $color;
+  }
+}
+
+$weights: 300, 500, 600, 700, 800;
+@each $weight in $weights {
+  .w#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+> span {
+  color: $orange;
+}

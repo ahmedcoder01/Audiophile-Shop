@@ -1,0 +1,36 @@
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/helpers/keyframes";
+
+.notification {
+  @include flex-layout(row, null, center, 10px);
+
+  padding: 14px 24px;
+  font-size: 14px;
+  background: $orange;
+  color: $white;
+  border-radius: $small-round;
+  animation: slideLeft 0.4s linear;
+  transition: 0.3s;
+  width: fit-content;
+
+  .notification__close-btn {
+    transform: scale(1.2);
+    user-select: none;
+    color: $white;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  svg {
+    width: 20px;
+  }
+}
+
+.success {
+  background: $green;
+}
+.fail {
+  background: $red;
+}

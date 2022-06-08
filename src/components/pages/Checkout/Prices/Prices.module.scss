@@ -1,0 +1,32 @@
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/variables/colors";
+
+.prices {
+  padding: 25px 0;
+  width: 100%;
+  ul {
+    @include flex-layout(column, center, center, 10px);
+
+    li {
+      @include flex-layout(row, space-between, center, null);
+      width: 100%;
+
+      &.grand-total {
+        span {
+          color: $orange;
+        }
+      }
+
+      p {
+        color: $gray-text;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+
+      span {
+        display: block;
+        font-weight: 700;
+      }
+    }
+  }
+}

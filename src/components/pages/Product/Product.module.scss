@@ -1,0 +1,7 @@
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+@import "../../../sass/helpers/mixins";
+
+.product {
+  @include flex-layout(column, null, null, null);
+}

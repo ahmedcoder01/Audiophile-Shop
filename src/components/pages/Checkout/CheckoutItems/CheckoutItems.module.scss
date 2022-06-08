@@ -1,0 +1,6 @@
+@import "../../../../sass/helpers/mixins";
+
+.checkout__items {
+  @include flex-layout(column, center, center, 15px);
+  padding: 25px 0 0;
+}

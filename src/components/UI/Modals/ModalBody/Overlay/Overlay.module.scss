@@ -1,0 +1,14 @@
+@import "../../../../../sass/variables/colors";
+@import "../../../../../sass/variables/sizes";
+@import "../../../../../sass/helpers/mixins";
+
+.overlay {
+  background: rgba(0, 0, 0, 0.212);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  position: fixed;
+  @include flex-layout(row, center, center, 0);
+}

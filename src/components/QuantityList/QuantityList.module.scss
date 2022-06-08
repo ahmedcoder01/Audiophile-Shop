@@ -1,0 +1,17 @@
+@import "../../sass/helpers/mixins";
+@import "../../sass/variables/colors";
+
+.quantities {
+  @include flex-layout(column, null, null, 15px);
+
+  .quantities__item {
+    color: $black;
+    font-size: 15px;
+    font-weight: 300;
+    span {
+      color: $orange;
+      font-weight: 600;
+      margin-right: 15px;
+    }
+  }
+}

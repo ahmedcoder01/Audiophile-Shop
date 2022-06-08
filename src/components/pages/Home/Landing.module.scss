@@ -1,0 +1,39 @@
+@import "../../../sass/helpers/mixins";
+
+.landing {
+  // filling the fullscreen, and subtracting the header height
+  min-height: calc(100vh - 86px);
+  position: relative;
+  @include background(center);
+
+  @include breakpoint-min(small) {
+    background-image: url("../../../assets/images/home/desktop/image-hero.jpg");
+  }
+  @include breakpoint(small) {
+    background-image: url("../../../assets/images/home/tablet/image-hero.jpg");
+  }
+  @include breakpoint-max(mobile) {
+    background-image: url("../../../assets/images/home/mobile/image-hero.jpg");
+  }
+
+  @include flex-layout(row, null, center, 0);
+
+  .landing__content {
+    @include breakpoint-min(small) {
+      width: 50%;
+      text-align: left;
+
+      p,
+      button {
+        margin: unset;
+      }
+    }
+    text-align: center;
+    @include flex-layout(column, null, null, 15px);
+  }
+}
+
+.p {
+  max-width: 350px;
+  margin: auto;
+}

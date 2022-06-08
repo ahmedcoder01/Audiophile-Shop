@@ -1,0 +1,49 @@
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/variables/sizes";
+@import "../../../sass/variables/colors";
+
+.splitted-product {
+  padding: ($section / 3) 0;
+
+  button {
+    margin: initial;
+  }
+}
+
+.container {
+  @include flex-layout(row, center, center, 20px);
+  height: 50vh;
+  max-height: 50vh;
+
+  @include breakpoint-max(small) {
+    gap: 8px;
+  }
+
+  .content {
+    background: $gray;
+    @include flex-layout(column, center, null, 15px);
+    padding-left: 90px;
+
+    @include breakpoint-max(small) {
+      padding-left: 10px;
+      padding-right: 10px;
+      gap: 5px;
+    }
+  }
+
+  .content,
+  .picture {
+    height: 100%;
+    max-height: 100%;
+    border-radius: $small-round;
+    flex: 1;
+  }
+
+  .picture {
+    img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+}

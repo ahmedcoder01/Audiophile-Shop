@@ -1,0 +1,49 @@
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/variables/colors";
+@import "../../../../sass/variables/sizes";
+
+.input {
+  @include flex-layout(column, null, null, 7px);
+
+  &.input-full-width {
+    @include breakpoint-min(small) {
+      grid-column: span 2;
+    }
+  }
+
+  .input__info-holder {
+    @include flex-layout(row, space-between, center, 0);
+
+    label {
+      font-size: 13px;
+      font-weight: 600;
+      color: $black;
+
+      &.label__error {
+        color: $red;
+      }
+    }
+    .input__info-holder__error {
+      color: $red;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  .input__field {
+    border: 1px solid #cfcfcf;
+    outline: none;
+    padding: 14px;
+    border-radius: 6px;
+
+    @include placeholder() {
+      font-weight: 500;
+      color: $gray-text;
+      font-size: 15px;
+    }
+
+    &.input__error {
+      border: 1px solid $red;
+    }
+  }
+}

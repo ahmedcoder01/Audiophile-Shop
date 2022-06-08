@@ -1,0 +1,19 @@
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/variables/colors";
+@import "../../../../sass/variables/sizes";
+
+.inputs {
+  @include flex-layout(column, null, null, 20px);
+
+  h3 {
+    color: $orange;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .inputs__billing,
+  .inputs__shipping-info {
+    @include grid-layout(250px, 15px);
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/variables/sizes";
+@import "../../../sass/variables/colors";
+
+.modal {
+  min-width: 250px;
+  position: absolute;
+  top: 100px;
+  right: 5%;
+  > * {
+    width: 100%;
+  }
+}
+
+.cart__header {
+  @include flex-layout(row, space-between, center, null);
+  button {
+    cursor: pointer;
+  }
+}
+
+.cart__footer {
+  @include flex-layout(column, null, null, 10px);
+  .cart__footer__price__holder {
+    @include flex-layout(row, space-between, center, null);
+  }
+  button {
+    width: 100%;
+  }
+}
+
+.empty-cart-icon {
+  width: 100px;
+  margin: auto;
+}
+
+.empty-cart-p {
+  text-align: center;
+}

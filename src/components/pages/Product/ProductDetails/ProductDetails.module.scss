@@ -1,0 +1,40 @@
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/variables/sizes";
+
+.product__card {
+  .product__card__container {
+    padding-top: $section / 2;
+    padding-bottom: $section / 2;
+    @include flex-layout(row, center, center, 80px);
+
+    @include breakpoint-min(mobile) {
+      button,
+      p {
+        margin: initial;
+      }
+    }
+    @include breakpoint-max(mobile) {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    picture,
+    .product__card__details {
+      flex: 1;
+    }
+    picture {
+      img {
+        border-radius: $small-round;
+      }
+    }
+
+    .product__card__details {
+      @include flex-layout(column, null, null, 30px);
+      p.price {
+        font-weight: 600;
+        font-size: 17px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../../sass/helpers/mixins";
+@import "../../../../sass/variables/sizes";
+@import "../../../../sass/variables/colors";
+
+.product__specs {
+  padding: $section 0;
+}
+
+.product__specs__container {
+  @include flex-layout(row, center, null, 60px);
+  @include breakpoint-max(small) {
+    flex-direction: column;
+  }
+
+  > * {
+    @include flex-layout(column, null, null, 20px);
+  }
+
+  .product__specs__features {
+    flex: 2;
+    p {
+      white-space: pre-line;
+    }
+  }
+
+  .product__specs__inbox {
+    flex: 1;
+  }
+}

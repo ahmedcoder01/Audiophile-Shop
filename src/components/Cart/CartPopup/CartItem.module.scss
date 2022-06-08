@@ -1,0 +1,25 @@
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/variables/sizes";
+@import "../../../sass/variables/colors";
+
+.cart__item {
+  @include flex-layout(row, space-between, center, 10px);
+  width: 100%;
+
+  img {
+    width: 60px;
+    border-radius: 10px;
+  }
+
+  .cart__item__details {
+    flex-grow: 2;
+    h2 {
+      font-size: 16px;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+}

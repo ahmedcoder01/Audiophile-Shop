@@ -1,0 +1,9 @@
+@import "../../../../sass/helpers/mixins";
+
+.thanks-modal {
+  @include flex-layout(column, null, null, 25px);
+
+  button {
+    width: 100%;
+  }
+}

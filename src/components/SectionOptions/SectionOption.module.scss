@@ -1,0 +1,35 @@
+@import "../../sass/helpers/mixins";
+@import "../../sass/variables/colors";
+@import "../../sass/variables/sizes";
+
+$image-size: 150px;
+
+.option {
+  flex: 1;
+  a {
+    @include flex-layout(column, center, center, 20px);
+    background: $gray;
+    position: relative;
+    border-radius: 15px;
+    padding: 90px 25px 25px;
+
+    > img {
+      margin: auto;
+      width: $image-size;
+      position: absolute;
+      top: $image-size / -2 + 25px;
+    }
+
+    span {
+      color: rgba(0, 0, 0, 0.5);
+      @include flex-layout(row, center, center, 8px);
+      text-transform: uppercase;
+      transition: 0.3s;
+      font-size: 15px;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}

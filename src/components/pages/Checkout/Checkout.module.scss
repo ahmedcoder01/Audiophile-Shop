@@ -1,0 +1,50 @@
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+
+.checkout {
+  background: #fafafa;
+  padding: $section 0;
+}
+
+.container {
+  //editing the GoBack button styles
+  // will change it later in the compnent file
+  > div > button {
+    padding-top: initial;
+  }
+}
+
+.checkout__form {
+  @include flex-layout(row, center, null, 30px);
+  padding-top: 10px;
+
+  @include breakpoint-max(small) {
+    flex-direction: column;
+  }
+
+  .checkout__form__inputs {
+    background: #fff;
+    padding: 30px;
+    border-radius: $small-round;
+    flex-grow: 1;
+  }
+  .checkout__details {
+    background: #fff;
+    padding: 20px;
+    border-radius: $small-round;
+
+    height: fit-content;
+
+    @include breakpoint-min(small) {
+      width: 30%;
+    }
+    @include breakpoint-max(small) {
+      order: -1;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

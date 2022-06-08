@@ -1,0 +1,69 @@
+@import "../../sass/helpers/mixins";
+@import "../../sass/variables/colors";
+@import "../../sass/variables/sizes";
+
+.header {
+  background: #191919;
+}
+.container {
+  @include flex-layout(row, null, center, null);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 0;
+
+  .menu-btn {
+    display: none;
+    margin: 0 20px 0 15px;
+    z-index: 550;
+
+    @include breakpoint-max(small) {
+      display: block;
+    }
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  nav {
+    @include flex-layout(row, space-between, center, 0);
+    flex: 2.2;
+
+    @include breakpoint-max(small) {
+      justify-content: end;
+    }
+
+    .menuList {
+      @include flex-layout(row, center, center, 0);
+      margin: 0;
+
+      @include breakpoint-max(small) {
+        display: none;
+      }
+    }
+
+    li {
+      padding: 0 15px;
+      font-weight: $bold;
+      color: $white;
+      text-transform: uppercase;
+      transition: 0.3s;
+      color: $white;
+
+      &:hover a {
+        color: $orange;
+      }
+
+      a {
+        background-color: transparent;
+        color: inherit;
+        font-weight: inherit;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+a.active {
+  color: $orange !important;
+}

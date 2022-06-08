@@ -1,0 +1,21 @@
+@import "../../../../sass/variables/colors";
+@import "../../../../sass/variables/sizes";
+@import "../../../../sass/helpers/mixins";
+
+.suggestions {
+  padding: $section 0;
+  .suggestions__container {
+    .title {
+      margin-bottom: 50px;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .sugesstions__products {
+      @include flex-layout(row, center, center, 15px);
+
+      @include breakpoint-max(mobile) {
+        flex-direction: column;
+      }
+    }
+  }
+}

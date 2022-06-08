@@ -1,0 +1,22 @@
+@import "../../sass/helpers/mixins";
+@import "../../sass/variables/colors";
+
+.menu-popup {
+  .menu-popup__ul {
+    @include flex-layout(column, center, center, null);
+
+    li {
+      padding: 27px;
+      a {
+        font-weight: 600;
+        color: $black;
+        transition: 0.3s;
+        font-size: 17px;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}

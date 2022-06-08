@@ -1,0 +1,62 @@
+@import "../../../sass/variables/sizes";
+@import "../../../sass/variables/colors";
+
+.button {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+  padding: 15px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: auto;
+  width: fit-content;
+
+  &:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+.small {
+  padding: 11px 16px;
+}
+
+.transparent-white {
+  box-shadow: 0 0 0 1px #191919 inset;
+  color: #fff;
+  background: transparent;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.black {
+  background: #191919;
+  color: $white;
+
+  &:hover {
+    background: rgb(76, 76, 76);
+  }
+}
+
+.orange {
+  background: $orange;
+  color: $white;
+
+  &:hover {
+    background: #fbaf85;
+  }
+}
+
+.transparent {
+  box-shadow: 0 0 0 1px #191919;
+  color: #191919;
+  background: transparent;
+
+  &:hover {
+    background: #191919;
+    color: $white;
+  }
+}

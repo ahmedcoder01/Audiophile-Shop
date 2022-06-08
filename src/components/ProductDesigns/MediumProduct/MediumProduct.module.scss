@@ -1,0 +1,28 @@
+@import "../../../sass/helpers/mixins";
+@import "../../../sass/variables/sizes";
+
+$lg: url("../../../assets/images/home/desktop/image-speaker-zx7.jpg");
+$md: url("../../../assets/images/home/tablet/image-speaker-zx7.jpg");
+$sm: url("../../../assets/images/home/mobile/image-speaker-zx7.jpg");
+
+.medium-product {
+  padding: ($section / 3) 0;
+}
+
+.wrapper {
+  @include responsive-image($lg, $md, $sm);
+  @include background(center);
+  min-height: 50vh;
+  border-radius: $small-round;
+  display: flex;
+  align-items: center;
+  padding-left: 90px;
+
+  .content {
+    @include flex-layout(column, null, null, 15px);
+
+    button {
+      margin: initial;
+    }
+  }
+}

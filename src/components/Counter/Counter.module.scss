@@ -1,0 +1,43 @@
+@import "../../sass/helpers/mixins";
+@import "../../sass/variables/sizes";
+@import "../../sass/variables/colors";
+
+.product__actions__counter {
+  @include flex-layout(row, center, center, 0);
+  background: $gray;
+  * {
+    background: inherit;
+  }
+
+  button {
+    width: 48px;
+    aspect-ratio: 1/1;
+    @include centered-grid();
+    color: $black;
+    transition: 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+      background: #d3d3d3;
+    }
+  }
+
+  .product__actions__counter__quantity {
+    width: 28px;
+    height: 100%;
+    color: $black;
+    @include centered-grid();
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.small {
+  button {
+    width: 33px;
+  }
+  .product__actions__counter__quantity {
+    font-size: 14px;
+  }
+}

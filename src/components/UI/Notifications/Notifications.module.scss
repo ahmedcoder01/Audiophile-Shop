@@ -1,0 +1,10 @@
+@import "../../../sass/variables/colors";
+@import "../../../sass/variables/sizes";
+@import "../../../sass/helpers/mixins";
+
+.notifications {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  @include flex-layout(column, null, null, 15px);
+}

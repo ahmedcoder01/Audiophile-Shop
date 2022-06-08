@@ -1,0 +1,20 @@
+@function conic($times, $color1, $color2) {
+  $deg: 360 / $times;
+
+  $current: 0;
+  @debug $current;
+  @warn $current;
+
+  $gradient: "";
+
+  @for $i from 1 through $times * 2 {
+    $color: if($i % 2 == 0, $color1, $color2);
+    $comma: if($gradient != "", ",", "");
+
+    $gradient: unquote("#{$gradient} #{$comma} #{$color} #{$current + 'deg'}");
+    $current: $current + $deg;
+    $gradient: unquote("#{$gradient}, #{$color} #{$current + 'deg'}");
+  }
+
+  @return $gradient;
+}

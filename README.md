@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Audiophile-E-Commerce
+React + Firebase e-commerce app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+E-commerce website for selling headphones, speakers, and earphones
 
-In the project directory, you can run:
 
-### `npm start`
+## Proposed work
+You can visit the live URL: [Live Project Preview](https://ahmedsalem3.github.io/Audiophile-E-Commerce/)
+Screenshot: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Success criteria
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The criteria that must be met in order to consider this project a success. 
 
-### `npm test`
+- High-end Performance
+- Good transition animations
+- Authentication
+- Layout Designing
+- Real checkout
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- React-Router
+- Redux-toolkit
+- Sass
+- Firebase
+- Framer Motion
+- Yup
+- Formik
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## As a user
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Authenticate
+- Buy Items
+- See past orders (Later)
+- update user details (Later)
+- Contact the support (Later)
 
-### `npm run eject`
+## As a front end engineer
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Authentication
+- Layout Clean Designing
+- Avoid Intensive React Work
+- Reducing unnecessary re-rendering in React
+- Using Redux and Action Creators
+- Good Routing Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Requirements
 
-## Learn More
+Current project requirements.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Use Redux
+- Create clean layout
+- Take advantage of URL params
+- Taking advantage of using memo and rendering component
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future work
+Future requirements.
 
-### Code Splitting
+- Ability to edit your profile
+- Saving Addresses
+- Authentication extra features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### What I have learned
 
-### Making a Progressive Web App
+- professional form validation using Formik + Yup
+- fixing React performance bottlenecks and optimizing performance
+- sending notifications
+- Redux thunk
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Guru Frontend Mentor challenge.
+[Challange Link](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx)

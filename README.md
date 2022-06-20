@@ -7,7 +7,9 @@ E-commerce website for selling headphones, speakers, and earphones
 
 
 ## Proposed work
-[Live Project Preview]([https://ahmedsalem3.github.io/Audiophile-E-Commerce/](https://audiophile-ecommerce-75172.web.app/earphones))
+
+[Live site preview](https://audiophile-ecommerce-75172.web.app)
+
 
 ## Success criteria
 

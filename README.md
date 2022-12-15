@@ -8,7 +8,7 @@ E-commerce website for selling headphones, speakers, and earphones
 
 ## Proposed work
 
-[Live site preview](https://audiophile-ecommerce-75172.web.app)
+[Live site preview](https://audiophile-ecommerce-75172.web.app/)
 
 
 ## Success criteria
